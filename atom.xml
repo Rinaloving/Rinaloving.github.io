@@ -4,21 +4,21 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>Scott Chacon</title>
- <link href="http://schacon.github.com/atom.xml" rel="self"/>
+ <title>雪 落</title>
+ <link href="#" rel="self"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://schacon.github.com/</id>
+ <id>https://github.com/Rinaloving</id>
  <author>
-   <name>Scott Chacon</name>
-   <email>schacon@gmail.com</email>
+   <name>雪 落</name>
+   <email>1426429456@qq.com</email>
  </author>
  
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://schacon.github.com/{{ post.url }}"/>
+   <link href="https://github.com/Rinaloving{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://schacon.github.com/{{ post.id }}</id>
+   <id>https://github.com/Rinaloving{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
