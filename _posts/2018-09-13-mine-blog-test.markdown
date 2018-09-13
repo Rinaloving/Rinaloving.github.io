@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "article1"
+title: 测试博客
 date:2018-09-13
 ---
 
