@@ -81,6 +81,7 @@ a:visited {
   padding: 0 0.5em;
   line-height: 2.5em;  
   font-weight: normal;
+  text-decoration:none;
 }
 
 #content {
