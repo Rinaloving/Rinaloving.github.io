@@ -151,8 +151,9 @@ table.post-list {
 }
 
 table.post-list a {
-  color: #262;
+  color: #FFD700;
   font-weight: bold;
+  text-decoration:none;
 }
 
 table.post-list th {
