@@ -12,7 +12,7 @@ C# 异步和多线程
 ![](http://b103.photo.store.qq.com/psb?/V12F66l52TZq7M/RTOoeT0mFRHiUw2TQh99Hi.Gatuc3DpEkZEjFxkT41k!/b/Yd.3bT1GGwAAYii.bT2HFQAA&bo=ngK8AQAAAAABFBI!&rf=viewer_4&t=5)
 
 ###书店买书为例
-<p><code>
+<pre><code>
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,4 +62,4 @@ namespace ThreadDmeo
     }
 }
 
-</code></p>
+</code></pre>
