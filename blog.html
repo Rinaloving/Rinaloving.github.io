@@ -16,7 +16,7 @@ full_posts: 5
   </div>
   {% else %}
     {% if forloop.index == page.full_posts %}
-    <h3 class="badge">近期博文</h3>
+    <div class="alert alert-primary"><h3近期博文</h3></div>
     <table class='post-list'>
     {% endif %}
     <tr>
