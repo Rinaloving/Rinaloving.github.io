@@ -9,7 +9,7 @@ description: 策略模式
 
 
 ### 商场促销_策略模式（未使用策略模式，用简单工厂模式）
-
+{% highlight ruby %}
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;
@@ -115,10 +115,10 @@ description: 策略模式
 
 		
 	}
-
+{% endhighlight %}
 	
 ### 加入策略模式后：
-
+{% highlight ruby %}
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;
@@ -233,7 +233,7 @@ description: 策略模式
 		  
 
 	}
-
+{% endhighlight %}
 
 ### 小结：
 
