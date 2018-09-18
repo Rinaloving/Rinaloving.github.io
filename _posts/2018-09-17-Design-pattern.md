@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 大话设计模式
-tags: C#
+title: 大话设计模式——简单工厂模式
+tags: 设计模式
 categories: Life
 description: 简单工厂模式
 ---
