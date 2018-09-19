@@ -18,7 +18,7 @@ full_posts: 3
 {% if paginator.total_pages > 1 %}
 
   {% if paginator.previous_page %}
-    <li><a href="{{ paginator.previous_page_path | relative_url }}">
+    <li><a href="{{ relative_url }}">
       &laquo; 上一页
     </a></li>
   {% else %}
@@ -29,18 +29,18 @@ full_posts: 3
     {% if page == paginator.page %}
       <li><a>{{ page }}</a></li>
     {% elsif page == 1 %}
-      <li><a href="{{ paginator.previous_page_path | relative_url }}">
+      <li><a href="{{ relative_url }}">
         {{ page }}
       </a></li>
     {% else %}
-      <li><a href="{{relative_url | replace: ':num', page }}">
+      <li><a href="{{  relative_url | replace: ':num', page }}">
         {{ page }}
       </a></li>
     {% endif %}
   {% endfor %}
 
   {% if paginator.next_page %}
-    <li><a href="{{ paginator.next_page_path | relative_url }}">
+    <li><a href="{{  relative_url }}">
       下一页 &raquo;
     </a></li>
   {% else %}
