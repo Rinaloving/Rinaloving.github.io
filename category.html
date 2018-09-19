@@ -1,0 +1,46 @@
+---
+layout: cmaster
+title: Blog
+full_posts: 1
+---
+
+
+
+
+<h3>C#</h3>
+{% for post in site.posts %}
+{%if post.tags contains  'C#' %}
+
+    <table class='table table-hover'>
+    <tr>
+      <th><a href='{{ post.url }}'>{{ post.title }}</a></th>
+      <th style="text-align: right;">{{ post.date | date: "%Y-%m-%d" }}</th>
+    </tr>
+	</table>
+{% endif %}
+{% endfor %}
+<h3 class="danger">生活</h3>
+{% for post in site.posts %}
+{%if post.tags contains  '生活' %}
+    <table class='table table-hover'>
+    <tr>
+      <th><a href='{{ post.url }}'>{{ post.title }}</a></th>
+      <th style="text-align: right;">{{ post.date | date: "%Y-%m-%d" }}</th>
+    </tr>
+	</table>
+{% endif %}
+{% endfor %}
+<h3 class="danger">设计模式</h3>
+{% for post in site.posts %}
+{%if post.tags contains  '设计模式' %}
+
+    <table class='table table-hover'>
+    <tr>
+      <th><a href='{{ post.url }}'>{{ post.title }}</a></th>
+      <th style="text-align: right;">{{ post.date | date: "%Y-%m-%d" }}</th>
+    </tr>
+	</table>
+{% endif %}
+
+{% endfor %}
+
