@@ -1,4 +1,51 @@
 ---
-layout: front
-title: 雪落の境
+layout: cmaster
+title: Blog
+full_posts: 3
 ---
+
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+  <div class='post'>
+    <a href="#" class="btn btn-info btn-lg"><span class='glyphicon glyphicon-calendar'>{{post.date | date: "%Y-%m-%d"}}</span></a>
+    <h1><a href='{{post.url}}'>{{post.title}}</a></h1>
+    <div class='body'>{{post.content}}</div>
+    <a href='{{post.url}}#disqus_thread'>查看详情</a>
+  </div>
+{% endfor %}
+<div class="post">
+<ul class="pagination">
+{% if paginator.total_pages > 1 %}
+
+  {% if paginator.previous_page %}
+    <li><a href="{{ paginator.previous_page_path | relative_url }}">
+      &laquo; 上一页
+    </a></li>
+  {% else %}
+    <li><span>&laquo; 上一页</span></li>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <li><a>{{ page }}</a></li>
+    {% elsif page == 1 %}
+      <li><a href="{{ paginator.previous_page_path | relative_url }}">
+        {{ page }}
+      </a></li>
+    {% else %}
+      <li><a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">
+        {{ page }}
+      </a></li>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <li><a href="{{ paginator.next_page_path | relative_url }}">
+      下一页 &raquo;
+    </a></li>
+  {% else %}
+    <li><span>下一页 &raquo;</span></li>
+  {% endif %}
+  </ul>
+</div>
+{% endif %}
