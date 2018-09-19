@@ -19,6 +19,8 @@ full_posts: 3
 <div>
 	<p>{{paginator.previous_page_path}}</p>
 	<p>{{relative_url}}</p>
+	<p>{{site.paginate_path}}</p>
+	
 <div>
   {% if paginator.previous_page %}
     <li><a href="{{ paginator.previous_page_path | relative_url }}">
