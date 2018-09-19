@@ -28,7 +28,7 @@ full_posts: 3
     {% if page == paginator.page %}
       <li><a>{{ page }}</a></li>
     {% elsif page == 1 %}
-      <li><a href="{{ paginator.previous_page_path | relative_url }}">
+      <li><a href="/">
         {{ page }}
       </a></li>
     {% else %}
