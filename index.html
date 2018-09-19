@@ -5,7 +5,7 @@ full_posts: 3
 ---
 
 <!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
+{% for post in  site.posts %}
   <div class='post'>
     <a href="#" class="btn btn-info btn-lg"><span class='glyphicon glyphicon-calendar'>{{post.date | date: "%Y-%m-%d"}}</span></a>
     <h1><a href='{{post.url}}'>{{post.title}}</a></h1>
