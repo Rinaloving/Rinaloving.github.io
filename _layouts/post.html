@@ -1,0 +1,26 @@
+---
+layout: cmaster
+---
+<div class='post'>
+     <a href="#" class="btn btn-info btn-lg"><span class='glyphicon glyphicon-calendar'>{{page.date | date: "%Y-%m-%d"}}</span></a>
+  <h1><a href='{{page.url}}'>{{page.title}}</a></h1>
+  <div class='body'>{{ content }}</div>
+</div>
+
+<div class="related">
+   <div class="alert alert-primary"><h3>近期博文</h3></div>
+  <table class="post-list">
+    {% for post in site.related_posts limit:3 %}
+      <tr>
+        <th><a href='{{ post.url }}'>{{ post.title }}</a></th>
+        <td>{{ post.date | date: "%Y-%m-%d"}}</td>
+        <td><a href='{{post.url}}#disqus_thread'>{{ post.tags }}</a></td>
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+
+<!-- <script type="text/javascript" charset="utf-8"> -->
+  <!-- var disqus_url = ""; -->
+<!-- </script> -->
+<!-- <div id="disqus_thread"></div><script type="text/javascript" src=""></script><noscript><a href="http://scottchacon.disqus.com/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a> -->
