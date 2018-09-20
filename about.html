@@ -1,0 +1,32 @@
+---
+layout: cmaster
+title: Blog
+---
+
+<div class="container">
+	<div class="row">
+	  <div class="col-md-8">
+{% for post in site.posts %}
+{%if post.tags contains  '说明' %}
+	<div>
+	    <h1><a href='{{post.url}}'>{{post.title}}</a></h1>
+		{{post.content}}
+	</div>
+{% endif %}
+
+{% endfor %}
+
+	  </div>
+	  <div class="col-md-4">
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="http://b127.photo.store.qq.com/psb?/440982b8-1f1e-473c-b41d-b630005d5f65/k47uYaiYTmzFY29wd.*P67qQrqqT3MhfQ7PypQE3b4g!/b/dDb0wUsuBAAA&bo=gALEA1IDAAUBKB4!&rf=viewer_4" alt="..." class="img-rounded">
+		  <div class="card-body">
+			<h5 class="card-title">Rinaloving</h5>
+			<p class="card-text">永远不要浪费你的一分一秒，去想任何你不喜欢的人。</p>
+			<a href="#" class="btn btn-primary">Go Here</a>
+		  </div>
+	</div>
+	  </div>
+	</div>
+</div>
+
