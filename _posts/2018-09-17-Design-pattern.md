@@ -9,7 +9,7 @@ description: 简单工厂模式
 
 
 ### 设计一个简单的计算器（本文只写了加法）
-{% highlight ruby %}
+{% highlight C# %}
 	using System;
 
 	namespace 简单工厂模式
