@@ -8,7 +8,7 @@ full_posts: 3
 
           <!--Sidebar content-->
 		  {% for post in paginator.posts %}
-		  <div style="margin-bottom:40px;">
+		  <div class="post" style="margin-bottom:40px;">
 			<a href="#" class="btn btn-info btn-lg"><span class='glyphicon glyphicon-calendar'>{{post.date | date: "%Y-%m-%d"}}</span></a>
 			<h1><a href='{{post.url}}'></a></h1>
 			<!-- <div class='body'>{{post.content}}</div> -->
@@ -25,7 +25,7 @@ full_posts: 3
 
 
 
-	<div class="">
+	<div class="post">
 		<nav aria-label="...">
 			<ul class="pagination">
 		{% if paginator.total_pages > 1 %}
