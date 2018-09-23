@@ -4,7 +4,7 @@ title: Blog
 full_posts: 3
 ---
 
-    <div class="container">
+ <div class="container">
       <div class="row">
         <div class="col-md-8">
           <!--Sidebar content-->
@@ -25,54 +25,52 @@ full_posts: 3
 		{% endfor %}
         </div>
 		<div class="col-md-3">
-		<div class="card" style="width: 18rem;">
-			<img class="card-img-top" src="http://b127.photo.store.qq.com/psb?/440982b8-1f1e-473c-b41d-b630005d5f65/k47uYaiYTmzFY29wd.*P67qQrqqT3MhfQ7PypQE3b4g!/b/dDb0wUsuBAAA&bo=gALEA1IDAAUBKB4!&rf=viewer_4" alt="..." class="img-rounded">
-		  <div class="card-body">
-			<h5 class="card-title">Rinaloving</h5>
-			<p class="card-text">永远不要浪费你的一分一秒，去想任何你不喜欢的人。去想任何你不喜欢的人</p>
-		  </div>
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="http://b127.photo.store.qq.com/psb?/440982b8-1f1e-473c-b41d-b630005d5f65/k47uYaiYTmzFY29wd.*P67qQrqqT3MhfQ7PypQE3b4g!/b/dDb0wUsuBAAA&bo=gALEA1IDAAUBKB4!&rf=viewer_4" alt="..." class="img-rounded">
+			  <div class="card-body">
+				<h5 class="card-title">Rinaloving</h5>
+				<p class="card-text">永远不要浪费你的一分一秒，去想任何你不喜欢的人。去想任何你不喜欢的人</p>
+			  </div>
+			</div>
+        </div>
+    </div>
+
+	<div class="post">
+		<nav aria-label="...">
+			<ul class="pagination">
+		{% if paginator.total_pages > 1 %}
+		  {% if paginator.previous_page %}
+			<li class="page-item "><a  class="page-link" href="{{ paginator.previous_page_path | relative_url }}">
+			  &laquo; 上一页
+			</a></li>
+		  {% else %}
+			<li class="page-item disabled"><span class="page-link">&laquo; 上一页</span></li>
+		  {% endif %}
+
+		  {% for page in (1..paginator.total_pages) %}
+			{% if page == paginator.page %}
+			  <li class="page-item"><a class="page-link">{{ page }}</a></li>
+			{% elsif page == 1 %}
+			  <li class="page-item"><a  class="page-link" href="/">
+				{{ page }}
+			  </a></li>
+			{% else %}
+			  <li class="page-item"><a class="page-link active"  class="sr-only" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">
+				{{ page }}
+			  </a></li>
+			{% endif %}
+		  {% endfor %}
+
+		  {% if paginator.next_page %}
+			<li class="page-item "><a class="page-link" href="{{ paginator.next_page_path | relative_url }}">
+			  下一页 &raquo;
+			</a></li>
+		  {% else %}
+			<li class="page-item disabled"><span class="page-link">下一页 &raquo;</span></li>
+		  {% endif %}
+		  </ul>
+		</nav>
 	</div>
-      </div>
-    </div>
-
-<div class="container">
-<div class="post">
-	<nav aria-label="...">
-		<ul class="pagination">
-	{% if paginator.total_pages > 1 %}
-	  {% if paginator.previous_page %}
-		<li class="page-item "><a  class="page-link" href="{{ paginator.previous_page_path | relative_url }}">
-		  &laquo; 上一页
-		</a></li>
-	  {% else %}
-		<li class="page-item disabled"><span class="page-link">&laquo; 上一页</span></li>
-	  {% endif %}
-
-	  {% for page in (1..paginator.total_pages) %}
-		{% if page == paginator.page %}
-		  <li class="page-item"><a class="page-link">{{ page }}</a></li>
-		{% elsif page == 1 %}
-		  <li class="page-item"><a  class="page-link" href="/">
-			{{ page }}
-		  </a></li>
-		{% else %}
-		  <li class="page-item"><a class="page-link active"  class="sr-only" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">
-			{{ page }}
-		  </a></li>
-		{% endif %}
-	  {% endfor %}
-
-	  {% if paginator.next_page %}
-		<li class="page-item "><a class="page-link" href="{{ paginator.next_page_path | relative_url }}">
-		  下一页 &raquo;
-		</a></li>
-	  {% else %}
-		<li class="page-item disabled"><span class="page-link">下一页 &raquo;</span></li>
-	  {% endif %}
-	  </ul>
-	</nav>
-</div>
 {% endif %}
-    </div>
-  </div>
 </div>
+
