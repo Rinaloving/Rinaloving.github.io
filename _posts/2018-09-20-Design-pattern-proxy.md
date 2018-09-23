@@ -74,7 +74,7 @@ namespace DelegateModel
 {% endhighlight %}
 
 
-###实用代理模式
+### 实用代理模式
 
 {% highlight C# %}
 using System;
@@ -83,7 +83,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace 代理模式_代理的代码
+namespace DelegateModel
 {
     class Program
     {
