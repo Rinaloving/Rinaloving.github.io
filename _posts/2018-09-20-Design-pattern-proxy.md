@@ -74,7 +74,7 @@ namespace DelegateModel
 {% endhighlight %}
 
 
-### 实用代理模式
+### 使用代理模式
 
 {% highlight C# %}
 using System;
