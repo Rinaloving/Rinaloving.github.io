@@ -13,9 +13,9 @@ full_posts: 3
 			<a href="#" class="btn btn-info btn-lg"><span class='glyphicon glyphicon-calendar'>{{post.date | date: "%Y-%m-%d"}}</span></a>
 			<h1><a href='{{post.url}}'></a></h1>
 			<!-- <div class='body'>{{post.content}}</div> -->
-			<div class='card' style="opacity:0.0;">
+			<div class='card' style="background: rgba(0,0,0, 0.5);">
 				<h5 class="card-header">{{post.title}}</h5>
-				<div class="card-body" style="opacity:0.0;">
+				<div class="card-body" style="background: rgba(0,0,0, 0.5);">
 					<p class="card-text">{{post.description}}</p>
 					<a href="{{post.url}}#disqus_thread" class="btn btn-primary">查看详情</a>
 				</div>
