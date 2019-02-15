@@ -10,7 +10,7 @@ full_posts: 3
 
 		  {% for post in paginator.posts %}
 		  <div class="post" style="margin-bottom:40px; width:1100px; height:400px; background:url(img/header.jpg);">
-			<span class='glyphicon glyphicon-calendar' style="background: rgba(0,0,0, 0.3)">{{post.date | date: "%Y-%m-%d"}}</span>
+			<p class="card-text"  style="color:white; font-size:30px; ">"{{post.date | date: "%Y-%m-%d"}}</p>
 			<h1><a href='{{post.url}}'></a></h1>
 			<!-- <div class='body'>{{post.content}}</div> -->
 			<div class='card' style="background: rgba(0,0,0, 0.0);">
