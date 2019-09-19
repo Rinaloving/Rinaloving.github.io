@@ -7,23 +7,34 @@ full_posts: 3
  <div class="container">
 
           <!--Sidebar content-->
+
 		  {% for post in paginator.posts %}
-		  <div class="post" style="margin-bottom:40px;">
-			<a href="#" class="btn btn-info btn-lg"><span class='glyphicon glyphicon-calendar'>{{post.date | date: "%Y-%m-%d"}}</span></a>
+		  <div class="post" ;"> 
+			<p class="card-text"  style="color:#EEA2AD; font-size:30px; ">{{post.date | date: "%Y-%m-%d"}}</p>
 			<h1><a href='{{post.url}}'></a></h1>
-			<!-- <div class='body'>{{post.content}}</div> -->
+			<!--<div class='body'>{{post.content}}</div> -->
 			<div class='card'>
-				<h5 class="card-header">{{post.title}}</h5>
-				<div class="card-body">
-					<p class="card-text">{{post.description}}</p>
-					<a href="{{post.url}}#disqus_thread" class="btn btn-primary">查看详情</a>
+				<h5 class="card-header"  style="color:#87CEFF; text-align: center;">{{post.title}}</h5>
+				<div class="card-body" ">
+					<p class="card-text"  style="color:#FFAEB9; text-align: center;">{{post.description}}</p>
+					<a href="{{post.url}}#disqus_thread" class="btn btn-primary" style="background: rgba(0,0,0, 0.3)">查看详情</a>
 				</div>
 				
 			</div>
 		  </div>
+		  
 		{% endfor %}
 
-
+<!--
+		{% for post in paginator.posts %}
+		  <div class='post'>
+			<a href="#" class="btn btn-info btn-lg"><span class='glyphicon glyphicon-calendar'>{{post.date | date: "%Y-%m-%d"}}</span></a>
+			<h1><a href='{{post.url}}'>{{post.title}}</a></h1>
+			<div class='body'>{{post.content}}</div>
+			<a href='{{post.url}}#disqus_thread'>查看详情</a>
+		  </div>
+		{% endfor %}
+		-->
 
 	<div class="post">
 		<nav aria-label="...">
